@@ -4,7 +4,8 @@ PARTE 1 – GIT - TEÓRICO/PRÁTICO
 explique a utilidade deste arquivo.
 
 R - O gitignore é muito útil para otimizar o trabalho e evitar uploads desnecessários. Com ele, listo os arquivos que não preciso subir para o Git deixando o upload mais leve e rápido.
-Um exemplo prático é a pasta bin e afins, já que com apenas "npm install" a pasta inteira é baixada na hora, sem necessidade de ser transferida do git.
+Um exemplo prático é a pasta bin e afins que são muito pesadas e extensas. Com apenas "npm install" a pasta inteira é baixada na hora, sem necessidade de ser transferida do git. 
+Pessoalmente gosto de usar o gitignore para arquivos de anotações pessoais que não precisam ir para meu GitHub.
 
 2 - O que é um pull request no GitHub? Qual a importância dele para projetos
 colaborativos?
