@@ -1,0 +1,45 @@
+PARTE 1 – GIT - TEÓRICO/PRÁTICO
+
+1 - Em que situações você usaria o arquivo .gitignore? Cite exemplos práticos e
+explique a utilidade deste arquivo.
+
+R - O gitignore é muito útil para otimizar o trabalho e evitar uploads desnecessários. Com ele, listo os arquivos que não preciso subir para o Git deixando o upload mais leve e rápido.
+Um exemplo prático é a pasta bin e afins, já que com apenas "npm install" a pasta inteira é baixada na hora, sem necessidade de ser transferida do git.
+
+2 - O que é um pull request no GitHub? Qual a importância dele para projetos
+colaborativos?
+
+R - Pull Request é quando pedimos para dar Merge de uma Branch para uma outra, juntando os conteúdos. 
+Ele é muito útil para casos onde uma feature esta sendo desenvolvida separadamente, para não afetar a branch principal. Assim, quando o desenvolvimento dela é concluído, é pedido um 
+pull request, que irá colocar essa feature na outra branch.
+O pull request é muito importante para manter o controle do desenvolvimento e fazer essas alterações com segurança. Ele precisa ser aprovado antes do merge, garantindo que alguém revise o código.
+Caso necessário, são feitas alterações que não irão afetar o desenvolvimento principal.
+
+3 - Qual a diferença entre git commit e git push?
+
+O git commit salva a versão do código localmente, já o git push envia essa alteração para o repositório remoto (Caso ele esteja configurado).
+
+4 – O que são conventional commits e conventional branches? Para qual finalidade
+eles seriam utilizados e resolveriam qual tipo de problema?
+
+Esse sistema é utilizado com a finalidade de padronizar commits e branchs, facilitando a comunicação da equipe. 
+São boas práticas que ajudam o time a trabalhar de forma mais fluída. Só de olhar o nome, já é possível saber exatamente o que o commit ou branch faz, sem necessidade de um estudo.
+
+5 - Você clonou um repositório remoto, irá criar uma branch chamada
+feature/login para fazer alguns commits. Escreva os comandos e passo a passo
+necessários para:
+a) Enviar essa branch para o repositório remoto.
+b) Criar um pull request no GitHub.
+
+// Criação da Branch
+git branch feature/login
+git checkout -b feature/login
+
+// Commit
+git add .
+git commit -m "New Branch"
+git push origin feature/login
+
+// Pull Request
+git checkout main
+git merge feature/login
